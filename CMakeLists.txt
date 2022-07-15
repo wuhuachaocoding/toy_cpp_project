@@ -67,6 +67,9 @@ endif()
 # add the executable
 add_executable(${PROJECT_NAME} ${SRC_LIST})
 
+# same as add_definitions
+target_compile_definitions(${PROJECT_NAME} PUBLIC HCG=\"${MPI_CXX_LIBRARIES}\")
+
 # 可执行文件要使用库文件，需要能够找到库文件和对应的头文件，
 # 可以分别通过 target_link_libraries 和 target_include_directories 来指定。
 
